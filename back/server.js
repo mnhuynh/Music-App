@@ -18,10 +18,10 @@ app.use(function(req, res, next) {
 
 app.get('/', (req, res) => {
     // console.log("get request?");
-    request("", (error, response, body) => {
-        console.log(body);
-        res.send(body);
-    })
+    // request("", (error, response, body) => {
+    //     console.log(body);
+    //     res.send(body);
+    // })
 })
 
 app.post('/post', (req, res) => {

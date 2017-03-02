@@ -22,7 +22,7 @@ class SongsList extends Component {
         })
         return (
             <div>
-                <h1>Songs List</h1>
+                <h1>Spice Girls World</h1>
                 <ul className="songsList">
                     {songsJSX}
                 </ul>
