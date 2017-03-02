@@ -1,0 +1,1 @@
+//whenever you click on song from search result details will be shown
