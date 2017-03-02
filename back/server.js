@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.json('api page')
 })
 
+app.post('/post', (req, res) => {
+    res.json('posting')
+})
+
 app.listen(8080, () => {
     console.log('Server Started on http://localhost:8080');
 	console.log('Press CTRL + C to stop server');
