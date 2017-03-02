@@ -1,20 +1,22 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 auto;
   font-family: sans-serif;
   text-align: center;
-}
-
-.songsList li {
-  list-style: none;
-}
-
-.container-row {
-  margin-left: auto;
-  margin-right: auto;
+  background-color: darkred;
 }
 
 img {
-  height: 300px;
-  width: 300px;
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.albumsList li {
+  list-style: none;
+  text-align: left;
+}
+
+.playButton {
+  margin-right: 10px;
 }

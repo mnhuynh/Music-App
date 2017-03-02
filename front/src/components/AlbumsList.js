@@ -30,30 +30,27 @@ class AlbumsList extends Component {
         const songsJSX = v.map((song, index) => {
             return (
                 <li key={index}>
+                    <button className="playButton" onClick={() => playSong(song.id)}>Play</button>
                     <Link to={`songs/${song.id}`}>{song.title}
                     </Link>
-                    {/*put play button here so that each one has a play button*/}
-                    <button onClick={() => playSong(song.id)}>Play</button>
                 </li>
             );
         })
         const songsJSX2 = b.map((song, index) => {
             return (
                 <li key={index}>
+                    <button className="playButton" onClick={() => playSong(song.id)}>Play</button>
                     <Link to={`songs/${song.id}`}>{song.title}
                     </Link>
-                    {/*put play button here so that each one has a play button*/}
-                    <button onClick={() => playSong(song.id)}>Play</button>
                 </li>
             );
         })
         const songsJSX3 = y.map((song, index) => {
             return (
                 <li key={index}>
+                    <button className="playButton" onClick={() => playSong(song.id)}>Play</button>
                     <Link to={`songs/${song.id}`}>{song.title}
                     </Link>
-                    {/*put play button here so that each one has a play button*/}
-                    <button onClick={() => playSong(song.id)}>Play</button>
                 </li>
             );
         })
@@ -65,7 +62,7 @@ class AlbumsList extends Component {
                         <img src="../img/spice.jpg" alt=""/>
                     </div>
                     <div className="col-md-6 songs">
-                        <ul className="songsList">
+                        <ul className="albumsList">
                             {songsJSX}
                         </ul>
                     </div>
@@ -76,7 +73,7 @@ class AlbumsList extends Component {
                         <img src="../img/spiceworld.jpg" alt=""/>
                     </div>
                     <div className="col-md-6 songs">
-                        <ul className="songsList">
+                        <ul className="albumsList">
                             {songsJSX2}
                         </ul>
                     </div>
@@ -87,7 +84,7 @@ class AlbumsList extends Component {
                         <img src="../img/forever.png" alt=""/>
                     </div>
                     <div className="col-md-6 songs">
-                        <ul className="songsList">
+                        <ul className="albumsList">
                             {songsJSX3}
                         </ul>
                     </div>
