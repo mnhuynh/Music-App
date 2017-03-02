@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   artist() {
-    let artist = [];
+    let artist = this.state.artist;
     axios.get('http://localhost:8080/')
       .then(res => {
         // console.log(res.data);
