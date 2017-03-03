@@ -7,15 +7,22 @@ body {
 
 .App {
   height: 1000px;
-  /*center image*/
 }
-
-/*.row Link {
-  text-decoration: none;
-}*/
 
 .album {
   font-size: 50px;
+}
+
+.enter {
+  float: right;
+  text-decoration: none;
+  color: white;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.enter:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .albumTitle {
@@ -49,6 +56,57 @@ body {
     }
 }
 
+#albumPage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.innerTitle {
+  width: 100px;
+  text-align: left;
+  color: black;
+  -webkit-text-stroke: 0.5px white;
+}
+
+.main, .albumsLink{
+  float: right;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  -webkit-text-stroke: 0.1px white;
+}
+
+@keyframes cameleon {
+    0% {
+      color: #df4545;
+    }
+
+    33% {
+        color: #415da5;
+    }
+    66% {
+        color: white;  
+    }
+    100% {
+        color: #df4545;
+    }
+}
+
+.main:hover, .albumsLink:hover {
+    text-decoration: none;
+    color:#415da5;
+    -webkit-text-stroke: 0.5px black;
+    animation-name: cameleon;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
 .img-fluid{
   max-width: 100%;
   height: auto;
@@ -62,35 +120,30 @@ body {
 }
 
 .albumsList {
-  margin: 50px;
-  padding: 20px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 18px;
   list-style: none;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
-  border: 1px solid black;
+  color: black;
+  -webkit-text-stroke: 0.5px white;
 }
 
-.albumDescription {
-  /*float: right;*/
-  width: 400px;
-  margin: 50px;
-  padding: 20px;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
-  border: 1px solid black;
-}
+#words {
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: black;
+  -webkit-text-stroke: white;
 
-.words {
-  font-size: 20px;
 }
 
 .playButton {
   margin-right: 10px;
+  font-size: 10px;
+  color:black;
+  -webkit-text-stroke:black;
 }
 
 button {
-  background-color: blue;
+  background-color: silver;
 }

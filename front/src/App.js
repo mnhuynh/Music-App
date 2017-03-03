@@ -59,13 +59,14 @@ class App extends Component {
           <div className="App">
               {React.cloneElement(this.props.children, {songs, playSong})}
               <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
-              <audio controls="controls"
+              <audio id="audioPlayer"
+                  controls="controls"
                   onPlay={this.onPlay} 
                   onPause={this.onPause}
                   ref="audioPlayer" 
                   src={songs[this.state.currentSong].source}>
               </audio>
-              <div className="buttons">
+              <div className="playButton">
                   <button onClick={() => this.prevNextSong(-1)}>Prev</button>
                   <button onClick={() => this.prevNextSong(1)}>Next</button>
               </div>

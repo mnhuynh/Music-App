@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class Forever extends Component {
 
@@ -32,10 +33,22 @@ class Forever extends Component {
             );
         })
         return (
-            <div className="container-row">
-                <ul className="albumsList">
-                    {foreverJSX}
-                </ul>
+            <div className="container">
+                <div id="albumPage" className="row">
+                    <Link className="main" to="/">Main</Link>
+                    <Link className="albumsLink" to="/songs/spiceworld">Spice World</Link>
+                    <Link className="albumsLink" to="/songs/spice">Spice</Link>
+                    <h1 className="innerTitle">Forever</h1>
+                    <div className="col-xs-6 col-sm-6 col-md-6 card-container">
+                        <ul className="albumsList">
+                            {foreverJSX}
+                        </ul>
+                    </div>
+                    <div className="col-xs-6 col-sm-6 col-md-6 card-container">
+                        <img className="img-fluid" src="../img/spiceBed.jpeg" alt="" />
+                        <p id="words" className="img-fluid">Forever is the third and final studio album by the girls, released on 6 November 2000.</p>
+                    </div>
+                </div>
             </div>
 
         )

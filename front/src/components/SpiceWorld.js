@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class SpiceWorld extends Component {
 
@@ -32,10 +33,22 @@ class SpiceWorld extends Component {
             );
         })
         return (
-            <div className="container-row">
-                <ul className="albumsList">
-                    {spiceWorldJSX}
-                </ul>
+            <div className="container">
+                <div id="albumPage" className="row">
+                    <Link className="main" to="/">Main</Link>
+                    <Link className="albumsLink" to="/songs/forever">Forever</Link>
+                    <Link className="albumsLink" to="/songs/spiceworld">Spice World</Link>
+                    <h1 className="innerTitle">Spice World</h1>
+                    <div className="col-xs-6 col-sm-6 col-md-6 card-container">
+                        <ul className="albumsList">
+                            {spiceWorldJSX}
+                        </ul>
+                    </div>
+                    <div className="col-xs-6 col-sm-6 col-md-6 card-container">
+                        <img className="img-fluid" src="../img/spiceMakeUp.jpg" alt="" />
+                        <p id="words" className="img-fluid">Spiceworld is the second studio album by the girls, released on 1 November 1997.</p>
+                    </div>
+                </div>
             </div>
 
         )
