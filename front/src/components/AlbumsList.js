@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-// Users can navigate between "songs list" page and "individual song details" page
-// The "songs list" page should show the list of song title with a link to the individual song page, 
-//and also a convenient play button next to it that will play that particular song
 
 class AlbumsList extends Component {
    constructor(){

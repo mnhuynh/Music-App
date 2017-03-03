@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-// The "individual song details" page should show the song title and description, 
-//and also a convenient play button that will play that particular song
 
 class AlbumSongs extends Component {
     render() {
@@ -14,7 +12,7 @@ class AlbumSongs extends Component {
         // console.log(song);
         return (
             <div>
-                <h1>Song Details</h1>
+                <h1>Songs</h1>
                 <h3>{song.title}
                     {/*put play button here*/}
                     <button onClick={() => playSong(song.id)}>Play</button>
