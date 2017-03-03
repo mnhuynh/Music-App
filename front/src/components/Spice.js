@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 
 class Spice extends Component {
-
+//next time try to pull this.filterAlbum() from App.js instead of being repetitive for each album
     constructor() {
         super();
         this.filterAlbum = this.filterAlbum.bind(this);
