@@ -55,12 +55,12 @@ class App extends Component {
     render() {
         const songs = this.props.route.songs;
         // console.log(songs)
-        // console.log(this.state.playing)
+        console.log(this.state.playing)
         const playSong = this.playSong;
         return (
             <div className="App">
                 {React.cloneElement(this.props.children, { songs, playSong })}
-                <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
+                {/*<h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
                 <audio id="audioPlayer"
                     controls="controls"
                     onPlay={this.onPlay} 
@@ -71,8 +71,8 @@ class App extends Component {
                 <div className="playButton">
                     <button onClick={() => this.prevNextSong(-1)}>Prev</button>
                     <button onClick={() => this.prevNextSong(1)}>Next</button>
-                </div>
-                {/*<section className="player">
+                </div>*/}
+                <section className="player">
                     <figure className="left_icon">
                         <div className="overlay">
                             <div className="shadow"></div>
@@ -111,7 +111,7 @@ class App extends Component {
                             <a className="forward icon-forward" onClick={() => this.prevNextSong(1)}></a>
                         </div>
                     </section>
-                </section>*/}
+                </section>
             </div>
         );
     }
