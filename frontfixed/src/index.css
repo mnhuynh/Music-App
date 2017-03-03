@@ -1,5 +1,11 @@
 body {
   text-align: center;
+  background-image:
+    radial-gradient(
+      red,
+      blue
+    );
+  color: white;
 }
 
 * {
@@ -18,7 +24,6 @@ body {
 
 .Albums h1 {
   font-size: 64px;
-  color: #EFECCA;
   margin-top: 0px;
   text-align: left;
   margin-left: 8%;
@@ -70,4 +75,8 @@ body {
 
 .playButton {
   margin-right: 10px;
+}
+
+button {
+  background-color: blue;
 }
