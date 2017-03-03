@@ -53,6 +53,7 @@ class App extends Component {
 
   render() {
       const songs = this.props.route.songs;
+      console.log(songs)
       const playSong = this.playSong;
       return (
           <div className="App">
