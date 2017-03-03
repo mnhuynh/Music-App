@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
             currentSong: 0,
@@ -12,67 +12,109 @@ class App extends Component {
         this.onPlay = this.onPlay.bind(this);
         this.onPause = this.onPause.bind(this);
         this.playSong = this.playSong.bind(this);
-      }
+    }
 
-  prevNextSong(num){
-      const songs = this.props.route.songs;
-      let newSong = (this.state.currentSong + songs.length + num) % songs.length
-      this.setState({
-          currentSong: newSong
-      })
-  }
+    prevNextSong(num) {
+        const songs = this.props.route.songs;
+        let newSong = (this.state.currentSong + songs.length + num) % songs.length
+        this.setState({
+            currentSong: newSong
+        })
+    }
 
-  onPlay(e) {
-      this.setState({
-          playing: true
-      })
-  }
-  
-  onPause(e) {
-      this.setState({
-          playing:false
-      })
-  }
+    onPlay(e) {
+        this.setState({
+            playing: true
+        })
+        // console.log("work?")
+    }
 
-  playSong(num) {
-      this.setState({
-          currentSong: num,
-          playing: true
-      })
-  }
+    onPause(e) {
+        this.setState({
+            playing: false
+        })
+    }
 
-  componentDidUpdate() { 
-      const audioPlayer = this.refs.audioPlayer;
-      // console.log(this.state)
-      if(this.state.playing === false){
-          audioPlayer.pause();
-      } else if (this.state.playing === true){
-          audioPlayer.play();
-      }
-  }
+    playSong(num) {
+        this.setState({
+            currentSong: num,
+            playing: true
+        })
+    }
 
-  render() {
-      const songs = this.props.route.songs;
-      console.log(songs)
-      const playSong = this.playSong;
-      return (
-          <div className="App">
-              {React.cloneElement(this.props.children, {songs, playSong})}
-              <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
-              <audio id="audioPlayer"
-                  controls="controls"
-                  onPlay={this.onPlay} 
-                  onPause={this.onPause}
-                  ref="audioPlayer" 
-                  src={songs[this.state.currentSong].source}>
-              </audio>
-              <div className="playButton">
-                  <button onClick={() => this.prevNextSong(-1)}>Prev</button>
-                  <button onClick={() => this.prevNextSong(1)}>Next</button>
-              </div>
-          </div>
-      );
-  }
+    componentDidUpdate() {
+        const audioPlayer = this.refs.audioPlayer;
+        console.log(this.state)
+        if (this.state.playing === false) {
+            audioPlayer.pause();
+        } else if (this.state.playing === true) {
+            audioPlayer.play();
+        }
+    }
+
+    render() {
+        const songs = this.props.route.songs;
+        // console.log(songs)
+        // console.log(this.state.playing)
+        const playSong = this.playSong;
+        return (
+            <div className="App">
+                {React.cloneElement(this.props.children, { songs, playSong })}
+                <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
+                <audio id="audioPlayer"
+                    controls="controls"
+                    onPlay={this.onPlay} 
+                    onPause={this.onPause}
+                    ref="audioPlayer" 
+                    src={songs[this.state.currentSong].source}>
+                </audio>
+                <div className="playButton">
+                    <button onClick={() => this.prevNextSong(-1)}>Prev</button>
+                    <button onClick={() => this.prevNextSong(1)}>Next</button>
+                </div>
+                {/*<section className="player">
+                    <figure className="left_icon">
+                        <div className="overlay">
+                            <div className="shadow"></div>
+
+                            <div className="btn">
+                                <div className="light"></div>
+                            </div>
+                            <div className="cord_container">
+                                <div className="cord"></div>
+                            </div>
+                            <div className="reader"></div>
+                        </div>
+
+                        <div className="lp_cont">
+                            <div className="lp"></div>
+                        </div>
+                    </figure>
+
+                    <section className="content">
+                        <h1>{songs[this.state.currentSong].title}</h1>
+
+                        <div className="slider">
+                            <div className="progress">
+                            </div>
+                        </div>
+
+                        <div className="btns">
+                            <a className="back icon-backward" onClick={() => this.prevNextSong(-1)}></a>
+                            <a className="play icon-play" onClick={() => this.onPlay()}></a>
+                            <audio id="audioPlayer"
+                                onPlay={this.onPlay} 
+                                onPause={this.onPause}
+                                ref="audioPlayer" 
+                                src={songs[this.state.currentSong].source}>
+                            </audio>
+                            <a className="forward icon-forward" onClick={() => this.prevNextSong(1)}></a>
+                        </div>
+                    </section>
+                </section>*/}
+            </div>
+        );
+    }
 }
 
 export default App;

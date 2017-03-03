@@ -5,7 +5,7 @@ class AlbumsList extends Component {
     render() {
         return (
             <div className="container">
-                <h1 className="album">Albums</h1>
+                <h1 className="album">Spice Girls</h1>
                 <div className="row">
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <Link className="enter" to="songs/spice">

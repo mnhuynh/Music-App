@@ -7,6 +7,7 @@ import Spice from './components/Spice';
 import SpiceWorld from './components/SpiceWorld';
 import Forever from './components/Forever';
 import './index.css';
+import './css/style.css';
 
 function Song(source, title, album, id) {
   this.source = source;
