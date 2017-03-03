@@ -44,7 +44,7 @@ class App extends Component {
 
     componentDidUpdate() {
         const audioPlayer = this.refs.audioPlayer;
-        console.log(this.state)
+        // console.log(this.state)
         if (this.state.playing === false) {
             audioPlayer.pause();
         } else if (this.state.playing === true) {

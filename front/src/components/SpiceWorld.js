@@ -37,7 +37,7 @@ class SpiceWorld extends Component {
                 <div id="albumPage" className="row">
                     <Link className="main" to="/">Main</Link>
                     <Link className="albumsLink" to="/songs/forever">Forever</Link>
-                    <Link className="albumsLink" to="/songs/spiceworld">Spice World</Link>
+                    <Link className="albumsLink" to="/songs/spice">Spice</Link>
                     <h1 className="innerTitle">Spice World</h1>
                     <div className="col-xs-6 col-sm-6 col-md-6 card-container">
                         <ul className="albumsList">
