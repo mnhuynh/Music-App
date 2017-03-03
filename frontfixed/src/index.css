@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*not sure which is class .Albums & .parralax*/
+
+.Albums {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("");
+  height: 500px;
+  padding-top: 20px;
+}
+
+.Albums h1 {
+  font-size: 64px;
+  color: #EFECCA;
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 8%;
+}
+
+.highlightimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-container {
+  height: 336.25px;
+  perspective: 600;
+  position: inline-block;
+  width: 336.25px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.card {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.parralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.albumsList {
+  display: inline-block;
+  position: relative;
+  margin: 50px;
+  list-style: none;
+  text-align: left;
+}
+
+.playButton {
+  margin-right: 10px;
+}
