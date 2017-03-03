@@ -21,7 +21,7 @@ class AlbumsList extends Component {
                     </div>
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <h3>Play Forever</h3>
-                        <Link to="songs/spice">
+                        <Link to="songs/forever">
                             <img className="img-fluid" src="../img/forever.png" alt="" />
                         </Link>
                     </div>

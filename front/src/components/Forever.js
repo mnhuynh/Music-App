@@ -22,7 +22,7 @@ class Forever extends Component {
     render() {
         const {playSong} = this.props;
         let foreverAlbum = this.filterAlbum('Forever');
-        // console.log(foreverAlbum)
+        // console.log(spiceAlbum)
         const foreverJSX = foreverAlbum.map((song, index) => {
             return (
                 <li key={index}>
