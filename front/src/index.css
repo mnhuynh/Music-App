@@ -5,17 +5,48 @@ body {
   -webkit-text-stroke: 1.5px black;
 }
 
-h1 {
-  font-size: 50px;
-}
-
 .App {
   height: 1000px;
   /*center image*/
 }
 
-.row Link {
+/*.row Link {
   text-decoration: none;
+}*/
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+@media screen and (max-width: 995px) {
+    h1 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    h1 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 12px;
+    }
 }
 
 .img-fluid{

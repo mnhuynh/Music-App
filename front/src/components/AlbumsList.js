@@ -27,30 +27,6 @@ class AlbumsList extends Component {
                     </div>
                 </div>
             </div>
-
-            /*<div className="container-row">
-                <div className="col-md-12 album">
-                    <div className="col-md-4 albumImage">
-                        <h1>Spice</h1>
-                        <img src="../img/spice.jpg" alt=""/>
-                    </div>
-                </div>
-                
-                <div className="col-md-12 album">
-                    <div className="col-md-4 albumImage">
-                        <h1>Spice World</h1>
-                        <img src="../img/spiceworld.jpg" alt=""/>
-                    </div>
-                </div>
-
-                <div className="col-md-12 album">
-                    <div className="col-md-4 albumImage">
-                        <h1>Forever</h1>
-                        <img src="../img/forever.png" alt=""/>
-                    </div>
-                </div>
-            </div>*/
-
         )
     }
 }
