@@ -10,8 +10,9 @@ class App extends Component {
         }
         this.prevNextSong = this.prevNextSong.bind(this);
         this.onPlay = this.onPlay.bind(this);
-        this.onPause = this.onPause.bind(this);
+        // this.onPause = this.onPause.bind(this);
         this.playSong = this.playSong.bind(this);
+        this.handlePlay = this.handlePlay.bind(this);
     }
 
     prevNextSong(num) {
@@ -26,19 +27,37 @@ class App extends Component {
         this.setState({
             playing: true
         })
-        // console.log("work?")
+        console.log("work?")
     }
 
-    onPause(e) {
-        this.setState({
-            playing: false
-        })
-    }
+    // onPause(e) {
+    //     this.setState({
+    //         playing: false
+    //     })
+    // }
 
     playSong(num) {
+        console.log(this.state.playing);
+        const audioPlayer = this.refs.audioPlayer;
+        if(this.state.playing === true){
+            audioPlayer.pause()
+        } else audioPlayer.play()
+        
         this.setState({
             currentSong: num,
-            playing: true
+            playing: !this.state.playing 
+        })
+    
+    }
+
+    handlePlay(){
+        const audioPlayer = this.refs.audioPlayer
+        if(this.state.playing === true){
+            audioPlayer.pause()
+        } else audioPlayer.play()
+        
+        this.setState({
+            playing: !this.state.playing 
         })
     }
 
@@ -60,7 +79,7 @@ class App extends Component {
         return (
             <div className="App">
                 {React.cloneElement(this.props.children, { songs, playSong })}
-                <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
+                {/*<h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
                 <audio id="audioPlayer"
                     controls="controls"
                     onPlay={this.onPlay} 
@@ -71,7 +90,7 @@ class App extends Component {
                 <div>
                     <button className="playButton" onClick={() => this.prevNextSong(-1)}>Prev</button>
                     <button className="playButton" onClick={() => this.prevNextSong(1)}>Next</button>
-                </div>
+                </div>*/}
                 <section className="player">
                     <figure className="left_icon">
                         <div className="overlay">
@@ -101,10 +120,9 @@ class App extends Component {
 
                         <div className="btns">
                             <a className="back icon-backward" onClick={() => this.prevNextSong(-1)}></a>
-                            <a className="play icon-play" onClick={() => this.onPlay()}></a>
+                            <a className="play icon-play" onClick={this.handlePlay}></a>
                             <audio id="audioPlayer"
                                 onPlay={this.onPlay} 
-                                onPause={this.onPause}
                                 ref="audioPlayer" 
                                 src={songs[this.state.currentSong].source}>
                             </audio>
