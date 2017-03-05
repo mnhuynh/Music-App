@@ -18,7 +18,23 @@ body {
 
 .album {
   font-size: 50px;
+}
 
+.intro h3 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.intro {
+  margin: 3% 2% 3% 2%;
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: left;
+  font-size: 20px;
+  color: black;
+  -webkit-text-stroke: 0.2px white;
 }
 
 .enter {
@@ -164,10 +180,10 @@ body {
     .albumTitle {
       font-size: 20px;
     }
-    .innerTitle {
+    .innerTitle, .intro h3{
       font-size: 26px;
     }
-    .main, .albumsLink, .albumsList {
+    .main, .albumsLink, .albumsList, .intro{
       font-size: 15px;
     }
 }
@@ -179,10 +195,10 @@ body {
     .albumTitle {
       font-size: 12px;
     }
-    .innerTitle {
+    .innerTitle, .intro h3 {
       font-size: 20px;
     }
-    .main, .albumsLink, .albumsList {
+    .main, .albumsLink, .albumsList, .intro{
       font-size: 10px;
     }
 }
