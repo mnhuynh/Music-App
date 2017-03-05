@@ -37,36 +37,8 @@ body {
   font-size: 35px;
 }
 
-@media screen and (max-width: 995px) {
-    .album {
-      font-size: 40px;
-    }
-    .albumTitle {
-      font-size: 25px;
-    }
-}
-
-@media screen and (max-width: 715px) {
-    .album {
-      font-size: 30px;
-    }
-    .albumTitle {
-      font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 595px) {
-    .album {
-      font-size: 25px;
-    }
-    .albumTitle {
-      font-size: 12px;
-    }
-}
-
 #albumPage {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 5% 2% 5% 2%;
   padding: 50px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
@@ -74,8 +46,9 @@ body {
 }
 
 .innerTitle {
-  width: 100px;
+  width: 250px;
   text-align: left;
+  font-size: 36px;
   color: black;
   -webkit-text-stroke: 0.5px white;
 }
@@ -178,3 +151,36 @@ button {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
 }*/
+
+@media screen and (max-width: 995px) {
+    .album {
+      font-size: 40px;
+    }
+    .albumTitle {
+      font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .album {
+      font-size: 30px;
+    }
+    .albumTitle {
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .album {
+      font-size: 25px;
+    }
+    .albumTitle {
+      font-size: 12px;
+    }
+    .innerTitle {
+      font-size: 26px;
+    }
+    .main, .albumsLink, .albumsList {
+      font-size: 15px;
+    }
+}
