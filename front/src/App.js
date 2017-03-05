@@ -60,7 +60,7 @@ class App extends Component {
         return (
             <div className="App">
                 {React.cloneElement(this.props.children, { songs, playSong })}
-                {/*<h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
+                <h3>Currently Playing: {songs[this.state.currentSong].title}</h3>
                 <audio id="audioPlayer"
                     controls="controls"
                     onPlay={this.onPlay} 
@@ -71,7 +71,7 @@ class App extends Component {
                 <div>
                     <button className="playButton" onClick={() => this.prevNextSong(-1)}>Prev</button>
                     <button className="playButton" onClick={() => this.prevNextSong(1)}>Next</button>
-                </div>*/}
+                </div>
                 <section className="player">
                     <figure className="left_icon">
                         <div className="overlay">
