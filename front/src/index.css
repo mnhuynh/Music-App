@@ -6,14 +6,11 @@
 }
 
 body {
+  margin-bottom: 5%;
   font-family: "Fontdinerdotcom Huggable";
   text-align: center;
   color: white;
   -webkit-text-stroke: 1.5px black;
-}
-
-.App {
-  height: 800px;
 }
 
 .pageTitle{
