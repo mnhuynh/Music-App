@@ -95,7 +95,7 @@ body {
 .playButton {
   margin-right: 10px;
   font-size: 10px;
-  color:black;
+  color: black;
   -webkit-text-stroke:black;
 }
 
@@ -109,31 +109,15 @@ button {
     }
 
     33% {
-        color: #415da5;
+      color: #415da5;
     }
     66% {
-        color: white;  
+      color: white;  
     }
     100% {
-        color: #df4545;
+      color: #df4545;
     }
 }
-
-/*@keyframes cameleonBackground {
-    0% {
-      background-color: #df4545;
-    }
-
-    33% {
-        background-color: #415da5;
-    }
-    66% {
-        background-color: white;  
-    }
-    100% {
-        background-color: #df4545;
-    }
-}*/
 
 .album:hover, .albumTitle:hover, .main:hover, .albumsLink:hover {
     text-decoration: none;
@@ -145,11 +129,24 @@ button {
     animation-iteration-count: infinite;
 }
 
-/*button:hover {
-    animation-name: cameleonBackground;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
+/*@keyframes cameleonBG {
+    0% {
+      background-color: #df4545;
+    }
+
+    33% {
+      background-color: #415da5;
+    }
+    66% {
+      background-color: white;  
+    }
+    100% {
+      background-color: #df4545;
+    }
+}
+
+.playButton:hover {
+  animation: cameleonBG 2s ease-in-out infinite;
 }*/
 
 @media screen and (max-width: 995px) {

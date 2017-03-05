@@ -68,9 +68,9 @@ class App extends Component {
                     ref="audioPlayer" 
                     src={songs[this.state.currentSong].source}>
                 </audio>
-                <div className="playButton">
-                    <button onClick={() => this.prevNextSong(-1)}>Prev</button>
-                    <button onClick={() => this.prevNextSong(1)}>Next</button>
+                <div>
+                    <button className="playButton" onClick={() => this.prevNextSong(-1)}>Prev</button>
+                    <button className="playButton" onClick={() => this.prevNextSong(1)}>Next</button>
                 </div>
                 <section className="player">
                     <figure className="left_icon">
