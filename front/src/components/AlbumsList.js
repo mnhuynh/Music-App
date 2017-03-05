@@ -5,7 +5,7 @@ class AlbumsList extends Component {
     render() {
         return (
             <div className="container">
-                <h1 className="album">Spice Girls</h1>
+                <h1 className="pageTitle">Spice Girls</h1>
                 <div className="row">
                     <div className="intro">
                         <h3>Introduction</h3>
@@ -19,6 +19,7 @@ class AlbumsList extends Component {
                              and the biggest British pop phenomenon since Beatlemania. Among the highest profile acts in 1990s British popular culture, 
                             Time called them "arguably the most recognisable face" of Cool Britannia, the mid-1990s celebration of youth culture in the UK.</p>
                     </div>
+                    <h2 className="albums">Albums</h2>
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <Link className="enter" to="songs/spice">
                             <h3 className="albumTitle">Play Spice</h3>
