@@ -1,8 +1,7 @@
 @font-face {
  font-family: "Fontdinerdotcom Huggable";
  font-style: normal;
- font-weight: normal;
- src: local("Fontdinerdotcom Huggable"), local('FontdinerdotcomHuggable') url(../public/font/FontdinerdotcomHuggable.ttf) format('truetype');
+ src: local("Fontdinerdotcom Huggable"), local('FontdinerdotcomHuggable') url(/font/FontdinerdotcomHuggable.ttf) format('truetype');
 }
 
 body {
