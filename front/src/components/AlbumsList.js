@@ -18,23 +18,24 @@ class AlbumsList extends Component {
                             making them the best-selling female group of all time, one of the best-selling pop groups of all time,
                              and the biggest British pop phenomenon since Beatlemania. Among the highest profile acts in 1990s British popular culture, 
                             Time called them "arguably the most recognisable face" of Cool Britannia, the mid-1990s celebration of youth culture in the UK.</p>
+                        <p>- Wikipedia</p>
                     </div>
                     <h2 className="albums">Albums</h2>
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <Link className="enter" to="songs/spice">
-                            <h3 className="albumTitle">Play Spice</h3>
+                            <h3 className="albumTitle" title="Click Me!">Spice</h3>
                             <img className="img-fluid" src="../img/spice.jpg" alt="" />
                         </Link>
                     </div>
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <Link className="enter" to="songs/spiceworld">
-                            <h3 className="albumTitle">Play Spice World</h3>
+                            <h3 className="albumTitle" title="Click Me!">Spice World</h3>
                             <img className="img-fluid" src="../img/spiceworld.jpg" alt="" />
                         </Link>
                     </div>
                     <div className="col-xs-4 col-sm-4 col-md-4 card-container">
                         <Link className="enter" to="songs/forever">
-                            <h3 className="albumTitle">Play Forever</h3>
+                            <h3 className="albumTitle" title="Click Me!">Forever</h3>
                             <img className="img-fluid" src="../img/forever.png" alt="" />
                         </Link>
                     </div>
