@@ -94,13 +94,12 @@ body {
 
 .playButton {
   margin-right: 10px;
+  padding: 0px 5px 0px 5px;
   font-size: 10px;
   color: black;
   -webkit-text-stroke:black;
-}
-
-button {
-  background-color: silver;
+  background-color: #ececec;
+  border-radius: 5px;
 }
 
 @keyframes cameleon {
@@ -129,7 +128,7 @@ button {
     animation-iteration-count: infinite;
 }
 
-/*@keyframes cameleonBG {
+@keyframes cameleonBG {
     0% {
       background-color: #df4545;
     }
@@ -147,7 +146,7 @@ button {
 
 .playButton:hover {
   animation: cameleonBG 2s ease-in-out infinite;
-}*/
+}
 
 @media screen and (max-width: 995px) {
     .album {
@@ -165,6 +164,12 @@ button {
     .albumTitle {
       font-size: 20px;
     }
+    .innerTitle {
+      font-size: 26px;
+    }
+    .main, .albumsLink, .albumsList {
+      font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 595px) {
@@ -175,9 +180,9 @@ button {
       font-size: 12px;
     }
     .innerTitle {
-      font-size: 26px;
+      font-size: 20px;
     }
     .main, .albumsLink, .albumsList {
-      font-size: 15px;
+      font-size: 10px;
     }
 }

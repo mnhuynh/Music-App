@@ -72,7 +72,7 @@ class App extends Component {
                     <button className="playButton" onClick={() => this.prevNextSong(-1)}>Prev</button>
                     <button className="playButton" onClick={() => this.prevNextSong(1)}>Next</button>
                 </div>
-                <section className="player">
+                {/*<section className="player">
                     <figure className="left_icon">
                         <div className="overlay">
                             <div className="shadow"></div>
@@ -111,7 +111,7 @@ class App extends Component {
                             <a className="forward icon-forward" onClick={() => this.prevNextSong(1)}></a>
                         </div>
                     </section>
-                </section>
+                </section>*/}
             </div>
         );
     }
