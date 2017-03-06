@@ -21,19 +21,19 @@ class AlbumsList extends Component {
                         <p>- Wikipedia</p>
                     </div>
                     <h2 className="albums">Albums</h2>
-                    <div className="col-xs-4 col-sm-4 col-md-4 card-container">
+                    <div className="col-xs-4 col-sm-4 col-md-4 album-container">
                         <Link className="enter" to="songs/spice">
                             <h3 className="albumTitle" title="Click Me!">Spice</h3>
                             <img className="img-fluid" src="../img/spice.jpg" title="Click Me!" alt="" />
                         </Link>
                     </div>
-                    <div className="col-xs-4 col-sm-4 col-md-4 card-container">
+                    <div className="col-xs-4 col-sm-4 col-md-4 album-container">
                         <Link className="enter" to="songs/spiceworld">
                             <h3 className="albumTitle" title="Click Me!">Spice World</h3>
                             <img className="img-fluid" src="../img/spiceworld.jpg" title="Click Me!" alt="" />
                         </Link>
                     </div>
-                    <div className="col-xs-4 col-sm-4 col-md-4 card-container">
+                    <div className="col-xs-4 col-sm-4 col-md-4 album-container">
                         <Link className="enter" to="songs/forever">
                             <h3 className="albumTitle" title="Click Me!">Forever</h3>
                             <img className="img-fluid" src="../img/forever.png" title="Click Me!" alt="" />
