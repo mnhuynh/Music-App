@@ -65,7 +65,6 @@ class App extends Component {
         })
     }
     //convert time in seconds into a string format with MM:SS for display.
-    //Note that since we don't need access to 'this' in this method, it doesn't necessarily have to be bound in the constructor.
     displayTime(time) {
 
         // let minutes = parseInt(this.state.currentTime / 60);
