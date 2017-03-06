@@ -85,6 +85,15 @@ class App extends Component {
         return `${minutes}:${seconds}`
     }
 
+    //add an event in which the progress bar will move with the duration
+    // seekBar() {
+    //     const seekbar = document.getElementsByClassName("progress");
+    //     const audioPlayer = this.refs.audioPlayer;
+    //     seekbar.min = 0;
+    //     seekbar.max = audioPlayer.duration;
+    //     seekbar.value = 0;
+    // }
+
     componentDidMount() {
         const audioPlayer = this.refs.audioPlayer;
         //add in the total duration of audioPlayer of whichever song plays & whenever it changes with .ondurationchange event that comes with audio tag
@@ -109,15 +118,6 @@ class App extends Component {
             audioPlayer.play();
         }
     }
-
-    //add an event in which the progress bar will move with the duration
-    // seekBar() {
-    //     const seekbar = document.getElementsByClassName("progress");
-    //     const audioPlayer = this.refs.audioPlayer;
-    //     seekbar.min = 0;
-    //     seekbar.max = audioPlayer.duration;
-    //     seekbar.value = 0;
-    // }
 
     render() {
         const songs = this.props.route.songs;
