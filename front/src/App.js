@@ -85,7 +85,7 @@ class App extends Component {
         return `${minutes}:${seconds}`
     }
 
-    //add an event in which the progress bar will move with the duration
+    //add an event in which the progress bar will move with the duration -- just started, INCOMPLETE!
     // seekBar() {
     //     const seekbar = document.getElementsByClassName("progress");
     //     const audioPlayer = this.refs.audioPlayer;
