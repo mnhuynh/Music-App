@@ -97,7 +97,7 @@ class App extends Component {
     //         value = Math.floor((100 / audioPlayer.duration) * audioPlayer.currentTime);
     //     }
     //     progress.style.width = value + "%";
-    //     audioPlayer.addEventListener("timeupdate", progress, false);
+    //     audioPlayer.addEventListener("timeupdate", progress, false); //should be in componentDidMount??
     // }
 
     componentDidMount() {
