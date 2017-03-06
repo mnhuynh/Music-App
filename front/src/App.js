@@ -82,7 +82,9 @@ class App extends Component {
     //the tick of each duration per second seen in componentDidMount()
     durationTick() {
         if (this.state.playing === true) {
-            this.setState({ currentTime: this.refs.audioPlayer.currentTime })
+            this.setState({
+                currentTime: this.refs.audioPlayer.currentTime 
+            })
         }
     }
 
