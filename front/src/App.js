@@ -16,6 +16,7 @@ class App extends Component {
         this.playSong = this.playSong.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
         this.durationTick = this.durationTick.bind(this);
+        // this.seekBar = this.seekBar.bind(this);
     }
 
     prevNextSong(num) {
@@ -72,7 +73,7 @@ class App extends Component {
     //convert time in seconds into a string format with MM:SS for display.
     //Note that since we don't need access to 'this' in this method, it doesn't necessarily have to be bound in the constructor.
     displayTime(time) {
-        
+
         // let minutes = parseInt(this.state.currentTime / 60);
         // let seconds = parseInt(this.state.currentTime % 60);
         let minutes = Math.floor(time / 60);
@@ -108,6 +109,15 @@ class App extends Component {
             audioPlayer.play();
         }
     }
+
+    //add an event in which the progress bar will move with the duration
+    // seekBar() {
+    //     const seekbar = document.getElementsByClassName("progress");
+    //     const audioPlayer = this.refs.audioPlayer;
+    //     seekbar.min = 0;
+    //     seekbar.max = audioPlayer.duration;
+    //     seekbar.value = 0;
+    // }
 
     render() {
         const songs = this.props.route.songs;
