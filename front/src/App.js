@@ -6,13 +6,16 @@ class App extends Component {
         super();
         this.state = {
             currentSong: 0,
-            playing: false
+            playing: false,
+            currentTime: 0,
+            duration: 0
         }
         this.prevNextSong = this.prevNextSong.bind(this);
         this.onPlay = this.onPlay.bind(this);
         // this.onPause = this.onPause.bind(this);
         this.playSong = this.playSong.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
+        this.durationTick = this.durationTick.bind(this);
     }
 
     prevNextSong(num) {
@@ -42,23 +45,58 @@ class App extends Component {
         if (this.state.playing === true) {
             audioPlayer.pause()
         } else audioPlayer.play()
-        
+
         this.setState({
             currentSong: num,
-            playing: !this.state.playing 
+            playing: !this.state.playing
         })
-    
+
     }
 
-    handlePlay(){
+    handlePlay() {
         const audioPlayer = this.refs.audioPlayer
         if (this.state.playing === true) {
             audioPlayer.pause()
         } else audioPlayer.play()
-        
+
         this.setState({
-            playing: !this.state.playing 
+            playing: !this.state.playing
         })
+    }
+    //the tick of each duration per second seen in componentDidMount()
+    durationTick() {
+        if (this.state.playing === true) {
+            this.setState({ currentTime: this.refs.audioPlayer.currentTime })
+        }
+    }
+    //convert time in seconds into a string format with MM:SS for display.
+    //Note that since we don't need access to 'this' in this method, it doesn't necessarily have to be bound in the constructor.
+    displayTime(time) {
+        
+        // let minutes = parseInt(this.state.currentTime / 60);
+        // let seconds = parseInt(this.state.currentTime % 60);
+        let minutes = Math.floor(time / 60);
+        let seconds = Math.floor(time % 60);
+        //need this to make it 0:00
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        return `${minutes}:${seconds}`
+    }
+
+    componentDidMount() {
+        const audioPlayer = this.refs.audioPlayer;
+        //add in the total duration of audioPlayer of whichever song plays & whenever it changes with .ondurationchange event that comes with audio tag
+        audioPlayer.ondurationchange = () => {
+            if (audioPlayer.duration) {
+                this.setState({
+                    duration: audioPlayer.duration
+                })
+            }
+        }
+
+        //timer to move the durationTick of song by 1ms
+        this.timer = setInterval(this.durationTick, 1);
     }
 
     componentDidUpdate() {
@@ -117,13 +155,13 @@ class App extends Component {
                             <div className="progress">
                             </div>
                         </div>
-
+                        <p className="duration">{this.displayTime(this.state.currentTime)}/{this.displayTime(this.state.duration)}</p>
                         <div className="btns">
                             <a className="back icon-backward" onClick={() => this.prevNextSong(-1)}></a>
                             <a className="play icon-play" onClick={this.handlePlay}></a>
                             <audio id="audioPlayer"
-                                onPlay={this.onPlay} 
-                                ref="audioPlayer" 
+                                onPlay={this.onPlay}
+                                ref="audioPlayer"
                                 src={songs[this.state.currentSong].source}>
                             </audio>
                             <a className="forward icon-forward" onClick={() => this.prevNextSong(1)}></a>

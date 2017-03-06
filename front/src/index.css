@@ -30,6 +30,10 @@ body {
   -webkit-text-stroke: 0.2px white;
 }
 
+#intro {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .albums {
   font-size: 45px;
 }

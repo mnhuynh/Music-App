@@ -171,6 +171,13 @@
 	font-size: 20px;
 }
 
+.duration {
+	margin-right: 50px;
+	float: right;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 13px;
+}
+
 .slider,.progress {
 	width: 350px;
 	height: 10px;
@@ -209,6 +216,7 @@
 	width: 350px;
 	text-align: center;
 	margin-top: 23px;
+	margin-left: 40px;
 }
 
 .btns a {
