@@ -64,6 +64,7 @@ class App extends Component {
             playing: !this.state.playing
         })
     }
+    
     //convert time in seconds into a string format with MM:SS for display.
     displayTime(time) {
 
