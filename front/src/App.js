@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({
             playing: true
         })
-        console.log("work?")
+        // console.log("work?")
     }
 
     // onPause(e) {
@@ -37,9 +37,9 @@ class App extends Component {
     // }
 
     playSong(num) {
-        console.log(this.state.playing);
+        // console.log(this.state.playing);
         const audioPlayer = this.refs.audioPlayer;
-        if(this.state.playing === true){
+        if (this.state.playing === true) {
             audioPlayer.pause()
         } else audioPlayer.play()
         
@@ -52,7 +52,7 @@ class App extends Component {
 
     handlePlay(){
         const audioPlayer = this.refs.audioPlayer
-        if(this.state.playing === true){
+        if (this.state.playing === true) {
             audioPlayer.pause()
         } else audioPlayer.play()
         
@@ -74,7 +74,7 @@ class App extends Component {
     render() {
         const songs = this.props.route.songs;
         // console.log(songs)
-        console.log(this.state.playing)
+        // console.log(this.state.playing)
         const playSong = this.playSong;
         return (
             <div className="App">
