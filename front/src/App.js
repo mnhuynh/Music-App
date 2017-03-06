@@ -16,7 +16,7 @@ class App extends Component {
         this.playSong = this.playSong.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
         this.durationTick = this.durationTick.bind(this);
-        this.progess = this.progress.bind(this);
+        // this.progess = this.progress.bind(this);
     }
 
     prevNextSong(num) {
