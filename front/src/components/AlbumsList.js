@@ -8,7 +8,6 @@ class AlbumsList extends Component {
                 <h1 className="pageTitle">Spice Girls</h1>
                 <div className="row">
                     <div className="intro">
-                        <h3>Introduction</h3>
                         <p id="intro">The Spice Girls are an English pop girl group formed in 1994. 
                             The group originally consisted of Melanie Brown ("Scary Spice"), 
                             Melanie Chisholm ("Sporty Spice"), Emma Bunton ("Baby Spice"), 
