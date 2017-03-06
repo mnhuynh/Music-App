@@ -16,7 +16,7 @@ class App extends Component {
         this.playSong = this.playSong.bind(this);
         this.handlePlay = this.handlePlay.bind(this);
         this.durationTick = this.durationTick.bind(this);
-        // this.seekBar = this.seekBar.bind(this);
+        this.progess = this.progress.bind(this);
     }
 
     prevNextSong(num) {
@@ -64,12 +64,6 @@ class App extends Component {
             playing: !this.state.playing
         })
     }
-    //the tick of each duration per second seen in componentDidMount()
-    durationTick() {
-        if (this.state.playing === true) {
-            this.setState({ currentTime: this.refs.audioPlayer.currentTime })
-        }
-    }
     //convert time in seconds into a string format with MM:SS for display.
     //Note that since we don't need access to 'this' in this method, it doesn't necessarily have to be bound in the constructor.
     displayTime(time) {
@@ -78,25 +72,40 @@ class App extends Component {
         // let seconds = parseInt(this.state.currentTime % 60);
         let minutes = Math.floor(time / 60);
         let seconds = Math.floor(time % 60);
-        //need this to make it 0:00
+        //need to make it 0:00
         if (seconds < 10) {
             seconds = '0' + seconds;
         }
         return `${minutes}:${seconds}`
     }
 
+    //the tick of each duration per second seen in componentDidMount()
+    durationTick() {
+        if (this.state.playing === true) {
+            this.setState({ currentTime: this.refs.audioPlayer.currentTime })
+        }
+    }
+
     //add an event in which the progress bar will move with the duration -- just started, INCOMPLETE!
-    // seekBar() {
-    //     const seekbar = document.getElementsByClassName("progress");
+    // progress() {
+    //     const progress = document.getElementsByClassName("progress");
     //     const audioPlayer = this.refs.audioPlayer;
-    //     seekbar.min = 0;
-    //     seekbar.max = audioPlayer.duration;
-    //     seekbar.value = 0;
+    //     let value = 0;
+    //     if (audioPlayer.currentTime > 0) {
+    //         value = Math.floor((100 / audioPlayer.duration) * audioPlayer.currentTime);
+    //     }
+    //     progress.style.width = value + "%";
+    //     audioPlayer.addEventListener("timeupdate", progress, false);
     // }
 
     componentDidMount() {
+        // componentDidMount is called by react when the component 
+        // has been rendered on the page. We can set the interval here:
+        //timer to move the durationTick of song by 1ms
+        this.timer = setInterval(this.durationTick, 1);
+        //add in the total duration of audioPlayer of whichever song plays 
+        //& whenever it changes with .ondurationchange event that comes with audio tag
         const audioPlayer = this.refs.audioPlayer;
-        //add in the total duration of audioPlayer of whichever song plays & whenever it changes with .ondurationchange event that comes with audio tag
         audioPlayer.ondurationchange = () => {
             if (audioPlayer.duration) {
                 this.setState({
@@ -104,9 +113,12 @@ class App extends Component {
                 })
             }
         }
+    }
 
-        //timer to move the durationTick of song by 1ms
-        this.timer = setInterval(this.durationTick, 1);
+    componentWillUnmount() {
+        // This method is called immediately before the component is removed
+        // from the page and destroyed. We can clear the interval here:
+        clearInterval(this.timer);
     }
 
     componentDidUpdate() {
@@ -124,6 +136,9 @@ class App extends Component {
         // console.log(songs)
         // console.log(this.state.playing)
         const playSong = this.playSong;
+
+        const progress = this.progress;
+        console.log(progress);
         return (
             <div className="App">
                 {React.cloneElement(this.props.children, { songs, playSong })}
